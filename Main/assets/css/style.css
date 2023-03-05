@@ -1,0 +1,296 @@
+:root {
+  --colorRed: red;
+  --colorOverlay: rgba(0, 0, 0, 0.5);
+  --colorGradient: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.7));
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: var(--colorRed);
+  text-decoration: none;
+  transition: .25s;
+}
+
+.details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.details li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.details a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.details a:hover {
+  text-decoration: none;
+  color: var(--colorRed);
+  text-decoration: none;
+  transition: .25s;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+section img {
+  border-radius: 100px;
+  width: 100px;
+  height: auto;
+}
+
+section {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 24px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+.portfolio a {
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio a:first-child {
+  position: relative;
+  z-index: 2;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.portfolio a img {
+  width: 400px;
+  height: auto;
+  border-radius: 100px;
+  transition: all .3s ease-in-out;
+}
+
+.portfolio a:first-child img {
+  width: 400px; 
+  height: auto;
+  transform: scale(1.5);
+}
+
+.portfolio a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorOverlay);
+  opacity: 1;
+}
+
+
+.portfolio a:first-child::before {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  content: 'Project 1';
+  position: absolute;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.portfolio a:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio a::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 50
+}
+
+@media only screen and (max-width: 767px) {
+  nav ul {
+  text-align: center;
+  }
+  
+  section {
+  text-align: center;
+  }
+  
+  section h2 {
+  text-align: center;
+  }
+  
+  .portfolio {
+  justify-content: center;
+  }
+  
+  .details {
+  text-align: center;
+  }
+  
+  .details li {
+  margin-right: 5px;
+  }
+  }
+  
+  #about .profile {
+  float: left;
+  margin-right: 20px;
+  }
+  
+  #about .details {
+  max-width: 1000px;
+  margin: 0 auto;
+  }
+  
+  footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  }
+  
+  .portfolio-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: var(--colorOverlay);
+  }
+  
+  .portfolio-overlay h3 {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin: 0;
+  }
+  
+  .portfolio a {
+  position: relative;
+  margin: 10px;
+  z-index: 1;
+  }
+  
+  .portfolio a:first-child {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  }
+  
+  .portfolio a img {
+  width: 400px;
+  height: auto;
+  border-radius: 100px;
+  margin: 20px 20px 20px 20px;
+  transition: all .3s ease-in-out;
+  }
+  
+  .portfolio a:first-child img {
+  width: 400px;
+  height: auto;
+  transform: scale(1.5);
+  }
+  
+  .portfolio a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background-color: var(--colorOverlay);
+  opacity: 0.9;
+  }
+  
+  .portfolio a::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -75%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  opacity: 1;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .portfolio a:hover img {
+  transform: scale(1.1);
+  }
+  
+  @media only screen and (max-width: 767px) {
+  .portfolio a img {
+  max-width: 100%;
+  }
+  }
