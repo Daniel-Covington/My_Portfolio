@@ -1,3 +1,5 @@
+
+/* Variables to use accoss entire CSS */
 :root {
   --colorRed: red;
   --textoncolor: #fff;
@@ -94,7 +96,7 @@ section {
 section h2 {
   font-size: 24px;
 }
-
+/* Work Section */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -115,7 +117,7 @@ section h2 {
   border-radius: var(--borderRadius);
   transition: all .3s ease-in-out;
 }
-
+/* First most prominent Project  */
 .portfolio a:first-child {
   position: relative;
   z-index: 1;
@@ -125,12 +127,12 @@ section h2 {
   align-items: center;
   margin-bottom: 10px;
 }
-
+/* First most prominent Project  */
 .portfolio a:first-child img {
   width: 1000px; 
   height: 300px;
 }
-
+/* Controls overlay for project images */
 .portfolio a::before {
   content: attr(data-title);
   color: white;
@@ -151,10 +153,7 @@ section h2 {
   transition: opacity 0.3s ease-in-out;
   transform: translate(-50%, -50%) translateZ(0);;
 }
-
-.portfolio .project1 {
-  content: "Semantic Challenge";
-}
+/* Controls overlay text because I couldn't figure out how to get the attr data-title to work right*/
 
 .portfolio .project1::before {
   content: "Semantic Challenge";
@@ -176,15 +175,16 @@ section h2 {
   content: "Project 5";
 }
 
-
+/* Causes portfolio images to pop when you hover */
 .portfolio a:hover img {
   transform: scale(1.1);
 }
-
+/* Causes overlay on images to pop when you hover */
 .portfolio a:hover::before {
   transform: translate(-50%, -50%) translateZ(0) scale(1.5);
 }
 
+/* Allows my display photo to be beside my about me details */
   #about .profile {
     float: left;
     margin-right: 20px;
@@ -202,6 +202,8 @@ section h2 {
     color: var(--textoncolor);
     padding: 20px;
   }
+
+/* Moves objects when the screen size is changed */
 
   @media only screen and (max-width: 767px) {
     nav ul {
