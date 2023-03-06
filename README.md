@@ -43,5 +43,5 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 The following image demonstrates the web application's appearance and functionality:
 
-![Preview of Website(Desktop)](./Main/Images/desktop_view.jpg)
+![Preview of Website(Desktop)](./assets/Images/desktop_view.jpg)
 
