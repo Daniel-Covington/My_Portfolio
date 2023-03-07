@@ -11,14 +11,14 @@
   --borderRadius: 100px;
   --padding: 20px;
 }
-
+/* Body */
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(150, 148, 147);
   font-family: league spartan;
 }
-
+/* Header */
 header {
   background-color: var(--backroundcolor);
   color: var(--textoncolor);
@@ -49,7 +49,7 @@ nav a,
 .details p {
  margin-bottom: 30px; 
 }
-
+/* Nav shortcuts About me, Work, Contacts */
 nav ul {
   list-style: none;
   margin: 0;
@@ -70,7 +70,7 @@ nav a:hover,
   text-decoration: none;
   transition: .25s;
 }
-
+/* Main */
 main {
   display: flex;
   flex-wrap: wrap;
@@ -153,28 +153,6 @@ section h2 {
   transition: opacity 0.3s ease-in-out;
   transform: translate(-50%, -50%) translateZ(0);;
 }
-/* Controls overlay text because I couldn't figure out how to get the attr data-title to work right*/
-
-.portfolio .project1::before {
-  content: "Semantic Challenge";
-}
-
-.portfolio .project2::before {
-  content: "Project 2";
-}
-
-.portfolio .project3::before {
-  content: "Project 3";
-}
-
-.portfolio .project4::before {
-  content: "Project 4";
-}
-
-.portfolio .project5::before {
-  content: "Project 5";
-}
-
 /* Causes portfolio images to pop when you hover */
 .portfolio a:hover img {
   transform: scale(1.1);
@@ -195,6 +173,7 @@ section h2 {
     margin: 0 auto;
   }
 
+  /* Footer */
   footer {
     padding: var(--paddingMobile);
     text-align: center;
